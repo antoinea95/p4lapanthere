@@ -301,7 +301,9 @@ a:hover {
     line-height: 44px;
 }
 
+
 .navbar-brand img {
+    height: 40px; /* Ajout height qui était en attribut HTML */
     max-height: 200px;
     margin: 0 5px 0 0;
     display: inline;
@@ -736,7 +738,7 @@ h4 {
 }
 
 .white {
-    color: #FFFFFF!important;
+    color: black!important;
 }
 
 .portfolio-thumb {
@@ -775,17 +777,17 @@ h4 {
 }
 
 .tc-white {
-    color: #F3976C!important;
+    color: black!important; /* Modification de la couleur pour le contraste */
 }
 
 .btn-atomic-tangerine {
     background: #F3976C;
-    color: #FFFFFF!important;
+    color: black!important; /* Ajustement du contraste */
 }
 
 .btn-atomic-tangerine:hover {
-    background: #c27956!important;
-    color: #FFFFFF!important;
+    background: #F37131!important;
+    color: black!important;
 }
 
 .ltc-white {
