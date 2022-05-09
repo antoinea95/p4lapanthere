@@ -8,18 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <link rel="shortcut icon" type="image/png" href="favicon.jpg">
     
+	<!-- Lien css actualisé car non fonctionnel avant -->
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="./css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="./css/et-line.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
 	
     
-	<script src="./js/jquery-2.1.0.min.js"></script>
-	<script src="./js/bootstrap.min.js"></script>
-	<script src="./js/blocs.min.js"></script>
-	<script src="./js/jqBootstrapValidation.js"></script>
-	<script src="./js/formHandler.js"></script>
+	<script src="./js/jsquery-2.1.0-min.js" defer ></script>
+	<script src="./js/bootstrap-min.js" defer></script>
+	<script src="./js/bloc-min.js" defer></script>
+	<script src="./js/jsBootstrapValidation-min.js" defer ></script>
+	<script src="./js/formHandler.js" defer ></script>
 
+	<!-- Modification du title-->
     <title>Agence La Panthère: contactez-nous</title>
 
     
@@ -41,7 +44,7 @@
 				<div class="navbar row">
 					
 					<div class="navbar-header">
-						<a class="navbar-brand" href="index.html"><img src="img/agence-la-panthere-monochrome.svg" alt="Logo de l'agence de webdesign La Panthère"/></a>
+						<a class="navbar-brand" href="index.html"><img src="img/agence-la-panthere.svg" alt="Logo de l'agence de webdesign La Panthère"/></a>
 						<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
 							<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 						</button>
@@ -91,32 +94,33 @@
 			<div class="container bloc-lg">
 				<div class="row">
 					<div class="col-sm-6">
+						<!-- Ajout H2 -->
 						<h2> Contactez-nous</h2>
 						<form id="form_1" novalidate success-msg="Your message has been sent." fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!">
 							<div class="form-group">
-								<label>
+								<label for="name">
 									Nom
 								</label>
 								<input id="name" class="form-control" required />
 							</div>
 
 							<div class="form-group">
-								<label>
+								<label for="email">
 									Adresse email
 								</label>
 								<input id="email" class="form-control" type="email" required />
 							</div>
 
 							<div class="form-group">
-								<label>
+								<label for="input_504">
 									Comment nous avez-vous connu ?
 								</label>
 								<input class="form-control" type="email" required id="input_504" />
 							</div>
 
 							<div class="form-group">
-								<label>
-									Brief de votre projet (Ajoutez autant de détails que nécessaire)<br>
+								<label for="message">
+									Brief de votre projet (Ajoutez autant de détails que nécessaire)
 								</label><textarea id="message" class="form-control" rows="4" cols="50" required></textarea>
 							</div> 
 
@@ -126,9 +130,11 @@
 						</form>
 					</div>
 
-					<div class="col-sm-6">
+					<div class="col-sm-6 location">
+						<h2> Venez nous renconter</h2> <!--Ajout d'un titre + iframe google maps (augmenter le SEO local)-->
+						<iframe aria-label="carte google localisant l'agence La panthère" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.0829506555488!2d4.827978615473473!3d45.76952782103914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eb020f3664e9%3A0x13e3d71752922c1f!2s2%20Pl.%20Sathonay%2C%2069001%20Lyon!5e0!3m2!1sfr!2sfr!4v1652087418445!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 						<p>
-							contact@agencelapanthere.com<br>2 place Sathonay 69001 Lyon<br>Ouvert de 9h à 18h, du lundi au vendredi<br>
+							@agencelapanthere.com<br><strong>2 place Sathonay 69001 Lyon</strong><br>Ouvert de 9h à 18h, du lundi au vendredi<br>
 						</p>
 					</div>
 
@@ -149,6 +155,7 @@
 				<div class="row">
 
 					<div class="col-sm-12">
+						<!-- Ajout H3 -->
 						<h3 class="text-center white">
 							Agence La Panthère - Agence web basée à Lyon.<br>
 						</h3>

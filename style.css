@@ -52,9 +52,7 @@ a:hover {
     padding: 50px;
 }
 
-.bloc-sm {
-    padding: 20px 50px;
-}
+
 
 .bg-center,
 .bg-l-edge,
@@ -303,14 +301,13 @@ a:hover {
 
 
 .navbar-brand img {
-    height: 40px; /* Ajout height qui était en attribut HTML */
-    max-height: 200px;
+    height: 100px; /* Ajout height qui était en attribut HTML */
     margin: 0 5px 0 0;
     display: inline;
 }
 
 .navbar-brand img[src$=svg] {
-    min-width: 100px;
+    width: 235px;
 }
 
 .nav-center .navbar-brand img {
@@ -512,14 +509,34 @@ button {
     box-shadow: none;
 }
 
+.form-group label::after {
+    content: "*";
+} /* Ajout d'un indicateur pour montrer que les champs du formulaire sont obligatoires */
+
+
+div.location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.location p {
+    text-align: center;
+}
+
+.col-sm-6 iframe {
+    width: 90%;
+    height: 325px;
+    margin: 5px 0 15px 0;
+} /* Ajout d'une map google + modification de la disposition des éléments */
+
 .scrollToTop {
     width: 40px;
     height: 40px;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    opacity: 0;
-    z-index: 500;
+    display: none; /* Masquage de l'élément avec display */
     transition: all .3s ease-in-out;
 }
 
@@ -534,8 +551,9 @@ button {
 
 a[data-lightbox] {
     position: relative;
-    display: block;
+    display: flex;
     text-align: center;
+    justify-content: center;
 }
 
 a[data-lightbox]:hover::before {
@@ -660,6 +678,12 @@ a {
     max-width: 1000px;
 }
 
+
+/* style in HTML */ 
+.image-resize-mode {
+    width: 100px;
+}
+
 .hero-bloc-text {
     font-size: 38px;
 }
@@ -679,7 +703,7 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 15px;
 }
 
 .tight-width-whitespace {
@@ -703,7 +727,21 @@ p {
 
 .social {
     max-width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     margin: auto auto auto auto;
+}
+
+.social .col-sm-3 {
+    width: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#bloc-8 {
+    padding: 20px 50px;
 }
 
 h2 {
@@ -737,8 +775,24 @@ h4 {
     margin-top: 24px;
 }
 
+figure.citation blockquote {
+    border: none;
+    
+}
+
+
+.avis p  {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.citation cite {
+    color: #575757;
+    font-size: 15px;
+}
+
 .white {
-    color: black!important;
+    color: #FFFFFF!important;
 }
 
 .portfolio-thumb {
@@ -773,21 +827,21 @@ h4 {
 }
 
 .bgc-atomic-tangerine {
-    background-color: #F3976C;
+    background-color: #D93D1A;
 }
 
 .tc-white {
-    color: black!important; /* Modification de la couleur pour le contraste */
+    color: #FFFFFF!important; 
 }
 
 .btn-atomic-tangerine {
-    background: #F3976C;
-    color: black!important; /* Ajustement du contraste */
+    background: #D93D1A;
+    color: #FFFFFF!important; /* Ajustement du contraste */
 }
 
 .btn-atomic-tangerine:hover {
-    background: #F37131!important;
-    color: black!important;
+    background: #D91C1A!important;
+    color: #FFFFFF!important;
 }
 
 .ltc-white {
@@ -799,11 +853,11 @@ h4 {
 }
 
 .ltc-atomic-tangerine {
-    color: #F3976C!important;
+    color: #D93D1A!important;
 }
 
 .ltc-atomic-tangerine:hover {
-    color: #c27956!important;
+    color: #D91C1A!important;
 }
 
 .icon-dark-slate-blue {
@@ -824,7 +878,7 @@ h4 {
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    background-image: url("img/image-de-presentation.jpg");
 }
 
 @media (max-width: 1024px) {
@@ -964,9 +1018,15 @@ h4 {
         box-shadow: none;
     }
     .navbar-brand img {
-        max-height: 40px;
-        width: auto;
+        height: 100px;
+        width: 200px;
     }
+
+    .navbar-toggle {
+        margin: 35px 10px 0 0;
+    }
+
+
     .nav-invert .navbar-header {
         float: none;
         width: 100%;
@@ -1028,17 +1088,23 @@ h4 {
         width: 180px;
         height: 320px;
     }
+
+
+    .img-responsive {
+        width: 70%;
+        height: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .bloc-mob-center-text {
+        text-align: center;
+    }
 }
 
 @media (max-width: 400px) {
     .bloc {
         padding-left: 0;
         padding-right: 0;
-    }
-}
-
-@media (max-width: 767px) {
-    .bloc-mob-center-text {
-        text-align: center;
     }
 }
